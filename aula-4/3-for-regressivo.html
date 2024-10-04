@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Olá mundo !</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Diga Olá mundo !</h1>
+
+            <p>Digite quantas vezes você quiser</p>
+
+            <label for="txt1">Digite aqui:</label>
+
+            <input type="number" id="txt1">
+
+            <button onclick="botao_click()">Olá Mundo !</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var qtd = document.getElementById("txt1").value;
+            var quantidade = parseInt(qtd);
+
+            for (var i = quantidade; i >= 1; i--) {
+                alert("Olá Mundo ! " + i);
+            }
+        }
+
+    </script>
+
+</body>
+</html>

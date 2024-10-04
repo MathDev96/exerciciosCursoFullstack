@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Tabuada</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Tabuada</h1>
+
+            <p>Digite o número que você quiser</p>
+
+            <label for="txt1">Digite aqui:</label>
+
+            <input type="number" id="txt1">
+
+            <button onclick="botao_click()">Exibir tabuada</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var tab = document.getElementById("txt1").value;
+            var tabuada = parseInt(tab);
+
+            var mensagem = "A tabuada do é: \r";
+            for (var i = 1; i <= 20; i++) {
+
+                var calculo = i * tabuada;
+
+                var tabuadaAltual = i + " x " + tabuada + " = " + calculo + "\r";
+             
+                mensagem += tabuadaAltual;
+            }
+            alert(mensagem);
+        }
+
+    </script>
+
+</body>
+</html>

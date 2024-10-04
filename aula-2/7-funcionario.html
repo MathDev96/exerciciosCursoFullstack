@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Calculadora de salário por hora</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Calcule o seu salário por dia e hora</h1>
+
+            <p>Digite as informações:</p>
+
+            <label for="txt1">Nome:</label>
+            <input type="text" id="txt1">
+
+            <label for="txt2">Valor total do seu salário:</label>
+            <input type="number" id="txt2">
+
+            <label for="txt3">Quantidade de dias trabalhados no mês:</label>
+            <input type="number" id="txt3">
+
+            <label for="txt4">Quantidade de horas trabalhadas por dia:</label>
+            <input type="number" id="txt4">
+
+            <button onclick="botao_click()">Calcular</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var name = document.getElementById("txt1").value;
+            var salarioTotal = document.getElementById("txt2").value;
+            var diasMes = document.getElementById("txt3").value;
+            var horasDia = document.getElementById("txt4").value;
+
+            var calculo = salarioTotal / diasMes;
+            var calculo2 = calculo / horasDia;
+
+            var horasTrabalho = diasMes * horasDia;
+            var mensagem = "Olá, " + name + ". Você recebe R$ " + calculo + " por dia e recebe R$ " + calculo2 + " por hora trabalhada. Você trabalha " + horasTrabalho + " horas por mês.";
+            alert(mensagem);
+        }
+
+    </script>
+
+</body>
+</html>

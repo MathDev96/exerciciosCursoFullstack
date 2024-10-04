@@ -1,0 +1,9 @@
+{
+  "carro": {
+    "marca": "honda",
+    "modelo": "fit",
+    "placa": "DEX-2333",
+    "cor": "Preto",
+    "ano de fabricação": 2007
+  }
+}

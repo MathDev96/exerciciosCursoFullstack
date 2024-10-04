@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Notas</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Notas</h1>
+
+            <p>Digite as notas abaixo:</p>
+
+            <label for="txt1">Nota do primeiro semestre:</label>
+
+            <input type="number" id="txt1">
+
+            <label for="txt2">Nota do segundo semestre:</label>
+
+            <input type="number" id="txt2">
+
+
+            <button onclick="botao_click()">Botão</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var primeiroSemestre = document.getElementById("txt1").value;
+
+            var segundoSemestre = document.getElementById("txt2").value;
+
+            var semestre1 = parseFloat(primeiroSemestre);
+            var semestre2 = parseFloat(segundoSemestre);
+
+            var soma = semestre2 + semestre1;
+
+            var notaFinal = soma / 2;
+
+            if (notaFinal < 6) {
+                alert("Sua nota foi " + notaFinal + " e você foi reporvado");
+            }
+            else if (notaFinal > 6) {
+                alert("Sua nota foi" + notaFinal + " e você foi aprovado");
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
